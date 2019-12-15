@@ -1,10 +1,19 @@
 import React from 'react';
 
+import Input from '../../shared/components/FormElements/Input';
+import './NewPlace.css';
+
 const NewPlace = () => {
   return (
-    <div>
-      <h2>new place</h2>
-    </div>
+    <form className="place-form">
+      <Input
+        element="input"
+        type="text"
+        label="Title"
+        validators={[]}
+        errorText="Invalid input text"
+      />
+    </form>
   );
 };
 

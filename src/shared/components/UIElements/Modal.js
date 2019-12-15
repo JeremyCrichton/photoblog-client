@@ -12,7 +12,7 @@ const ModalOverlay = props => {
         <h2>{props.header}</h2>
       </header>
       <form
-        onSUbmit={
+        onSubmit={
           props.onSubmit ? props.onSubmit : () => e => e.preventDefault()
         }
       >
@@ -37,7 +37,7 @@ const Modal = props => {
         mountOnEnter
         unmountOnExit
         timeout={200}
-        classNames='modal'
+        classNames="modal"
       >
         <ModalOverlay {...props} />
       </CSSTransition>

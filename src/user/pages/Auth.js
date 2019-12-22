@@ -67,7 +67,7 @@ const Auth = () => {
 
     if (isLoginMode) {
       try {
-        await sendRequest(
+        const responseData = await sendRequest(
           'http://localhost:5000/api/users/login',
           'POST',
           JSON.stringify({
@@ -78,11 +78,11 @@ const Auth = () => {
             'Content-Type': 'application/json'
           }
         );
-        auth.login();
+        auth.login(responseData.user.id);
       } catch (err) {} // empty catch block is ok because its handled in the hook
     } else {
       try {
-        await sendRequest(
+        const responseData = await sendRequest(
           'http://localhost:5000/api/users/signup',
           'POST',
           JSON.stringify({
@@ -95,7 +95,7 @@ const Auth = () => {
           }
         );
 
-        auth.login();
+        auth.login(responseData.user.id);
       } catch (error) {}
     }
   };
@@ -133,8 +133,8 @@ const Auth = () => {
             element='input'
             type='password'
             label='Password'
-            validators={[VALIDATOR_MINLENGTH(5)]}
-            errorText='Invalid password'
+            validators={[VALIDATOR_MINLENGTH(6)]}
+            errorText='Please ensure password is at least 6 characters.'
             onInput={inputHandler}
           />
           <Button type='submit' disabled={!formState.isValid}>

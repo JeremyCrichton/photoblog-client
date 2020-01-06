@@ -82,8 +82,7 @@ const Auth = () => {
             'Content-Type': 'application/json'
           }
         );
-        console.log(responseData);
-        auth.login(responseData.user.id);
+        auth.login(responseData.userId, responseData.token);
       } catch (err) {} // empty catch block is ok because its handled in the hook
     } else {
       try {
@@ -110,7 +109,7 @@ const Auth = () => {
           // }
         );
 
-        auth.login(responseData.userId);
+        auth.login(responseData.userId, responseData.token);
       } catch (error) {}
     }
   };

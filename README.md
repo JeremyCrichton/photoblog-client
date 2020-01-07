@@ -1,2 +1,3 @@
 - Restrict Google API key to IP addresses
 - Change API key to restricted one (currently using open)
+- Move server static files somewhere - https://devcenter.heroku.com/articles/s3

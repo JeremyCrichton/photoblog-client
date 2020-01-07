@@ -1,6 +1,4 @@
-- Restrict Google API key to IP addresses
-- Change API key to restricted one (currently using open)
-- Move server static files somewhere - https://devcenter.heroku.com/articles/s3
+# Academind MERN Course App Project
 
 ## Frontend Deployment to Firebase
 
@@ -13,3 +11,14 @@
 2. git commit -m 'blah'
 3. git push origin master
 4. git push heroku master
+
+## Services
+
+- Firebase React Frontend: https://academind-mern.firebaseapp.com/
+- Heroku Node Backend: https://academind-mern.herokuapp.com/
+- Google Cloud
+- MongoDB Atlas
+
+## Todos
+
+- Move server static files somewhere - https://devcenter.heroku.com/articles/s3

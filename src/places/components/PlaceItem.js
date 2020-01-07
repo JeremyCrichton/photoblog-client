@@ -32,7 +32,7 @@ const PlaceItem = props => {
 
     try {
       await sendRequest(
-        `${REACT_APP_BACKEND_URL}/places/${props.id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/places/${props.id}`,
         'DELETE',
         null,
         { Authorization: `Bearer ${auth.token}` }

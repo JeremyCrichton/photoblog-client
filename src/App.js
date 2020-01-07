@@ -73,7 +73,7 @@ const App = () => {
         <main>
           <Suspense
             fallback={
-              <div classNamed="center">
+              <div className="center">
                 <LoadingSpinner />
               </div>
             }

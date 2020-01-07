@@ -15,7 +15,7 @@ const Users = () => {
     try {
       (async () => {
         const responseData = await sendRequest(
-          'http://localhost:5000/api/users'
+          `${REACT_APP_BACKEND_URL}/users`
         );
 
         setLoadedUsers(responseData);
@@ -29,7 +29,7 @@ const Users = () => {
     <>
       <ErrorModal error={error} onClear={clearError} />
       {isLoading && (
-        <div className='center'>
+        <div className="center">
           <LoadingSpinner />
         </div>
       )}

@@ -16,7 +16,7 @@ const UserPlaces = () => {
     try {
       (async () => {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/places/user/${userId}`
+          `${REACT_APP_BACKEND_URL}/places/user/${userId}`
         );
         setLoadedPlaces(responseData.places);
       })();
@@ -33,7 +33,7 @@ const UserPlaces = () => {
     <>
       <ErrorModal error={error} onClear={clearError} />
       {isLoading && (
-        <div className='center'>
+        <div className="center">
           <LoadingSpinner />
         </div>
       )}

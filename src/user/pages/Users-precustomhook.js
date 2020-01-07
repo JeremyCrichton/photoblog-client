@@ -16,7 +16,7 @@ const Users = () => {
 
     try {
       (async () => {
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch(`${REACT_APP_BACKEND_URL}/users`);
         const responseData = await response.json();
 
         if (!response.ok) {
@@ -43,7 +43,7 @@ const Users = () => {
     <>
       <ErrorModal error={error} onClear={errorHandler} />
       {isLoading && (
-        <div className='center'>
+        <div className="center">
           <LoadingSpinner />
         </div>
       )}

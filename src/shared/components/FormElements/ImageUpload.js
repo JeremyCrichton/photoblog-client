@@ -8,7 +8,6 @@ const ImageUpload = props => {
   const [previewUrl, setPreviewUrl] = useState();
   const [isValid, setIsValid] = useState(false);
 
-  // Establish a ref to a DOM node
   const filePickerRef = useRef();
 
   // Use whenever file changes to generate a preview
@@ -28,7 +27,7 @@ const ImageUpload = props => {
     let pickedFile;
     let fileIsValid = isValid;
     if (event.target.files && event.target.files.length === 1) {
-      pickedFile = event.target.files[0]; // files property is default JS
+      pickedFile = event.target.files[0];
       setFile(pickedFile);
       setIsValid(true);
       fileIsValid = true;

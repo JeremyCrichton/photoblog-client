@@ -34,7 +34,7 @@ export const useAuth = () => {
     localStorage.removeItem('userData');
   }, []);
 
-  // Automantically logout user
+  // Automatically logout user
   useEffect(() => {
     // When we login, set a new timer
     if (token && tokenExpirationDate) {

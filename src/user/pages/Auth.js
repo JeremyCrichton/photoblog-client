@@ -98,15 +98,6 @@ const Auth = () => {
           `${process.env.REACT_APP_BACKEND_URL}/users/signup`,
           'POST',
           formData
-          // JSON.stringify({
-          //   name: formState.inputs.name.value,
-          //   email: formState.inputs.email.value,
-          //   password: formState.inputs.password.value
-          // }),
-          // *** No need to set headers as we would if sending JSON data, as FormData auto sets
-          // {
-          //   'Content-Type': 'application/json'
-          // }
         );
 
         auth.login(responseData.userId, responseData.token);

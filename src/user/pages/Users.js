@@ -10,7 +10,6 @@ const Users = () => {
   const [loadedUsers, setLoadedUsers] = useState();
 
   // Without useEffect, we would fetch data on each re-render, which would trigger a re-render thus infinite loop
-  // An empty array arg means it will only run once
   useEffect(() => {
     try {
       (async () => {

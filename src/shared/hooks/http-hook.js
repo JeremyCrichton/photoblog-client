@@ -51,7 +51,7 @@ export const useHttpClient = () => {
     setError(null);
   };
 
-  // all this abort ctrl logic is so wwe don't continue w/ a request that is on its way out if we switch away from component that triggered the request
+  // all this abort ctrl logic is so we don't continue w/ a request that is on its way out if we switch away from component that triggered the request
   useEffect(() => {
     // fn w/in useEffect fn executes as a cleanup fn before useEffect runs again
     // OR when component that uses useEffect (uses this custom hook) unmounts

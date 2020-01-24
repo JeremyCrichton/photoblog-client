@@ -9,4 +9,4 @@
 
 ## Deployed Site
 
-- https://academind-mern.firebaseapp.com/
+- https://jcrichton-photoblog.firebaseapp.com
